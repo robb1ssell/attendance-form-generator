@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'AT&T Aleck Condensed';
+  src: url('./fonts/ATTAleckCd_W_Rg.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/ATTAleckCd_W_Rg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/ATTAleckCd_W_Rg.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/ATTAleckCd_W_Rg.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/ATTAleckCd_W_Rg.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/ATTAleckCd_W_Rg.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'AT&T Aleck Condensed MD';
+  src: url('./fonts/ATTAleckCd_W_Md.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/ATTAleckCd_W_Md.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/ATTAleckCd_W_Md.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/ATTAleckCd_W_Md.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/ATTAleckCd_W_Md.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/ATTAleckCd_W_Md.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: 'AT&T Aleck Condensed MD', Fallback, sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+.form-radio-list {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: scale(0.8);
+  transition: 0.5s;
+  input[type="radio"]:checked ~ &,
+  input[type="checkbox"]:checked ~ & {
+    opacity: 1;
+    max-height: 300px;
+    overflow: visible;
+    padding: 10px 20px;
+    transform: scale(1);
+  }
+}
+
+textarea {
+  resize: none;
+  max-width: 100%;
+}
+
+#lifecare-checkbox {
+  margin-left: 15px;
+}
+
+label {
+  padding-right: 10px;
+}
+
+p {
+  word-wrap: normal;
+  max-width: 650px;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  line-height: 40px;
+  margin-top: 10px;
+  text-align: center;
+  background:#f1f1f1;
+}
+
+/* IE 6 
+* html .footer {
+  position:absolute;
+  top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+*/
+
+#save-pdf {
+  margin-top: 25px;
+  margin-bottom: 45px;
+}
+
+.no-margin {
+  margin: 0px !important;
+}
+
+.margin-top-only {
+  margin: 15px 0px 0px;
+}
+
+.signature-line {
+  visibility: hidden;
+  height: 0px;
+}
+
+#occurrences {
+  max-height: 230px;
+  overflow: auto;
+}
+
+/*CSS for tech uid input clearing*/
+.clearable-input {
+  position: relative;
+  display: inline-block;
+}
+.clearable-input > input {
+  padding-right: 1.4em;
+}
+.clearable-input >[data-clear-input] {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+  font-size: 1.4em;
+  padding: 0 0.2em;
+  line-height: 1em;
+  cursor: pointer;
+}
+.clearable-input > input::-ms-clear {
+  display: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  /*Bootstrap 4 override*/
+  -webkit-appearance: searchfield-cancel-button;
+}
